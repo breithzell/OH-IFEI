@@ -12,12 +12,12 @@ Using Wifi for data communication
 */
 
 //#define DCSBIOS_DEFAULT   
-#define DCSBIOS_WIFI_FORK   
+#define DCSBIOS_DEFAULT   
 
 // Wifi credentials if Wifi is enabled
 #ifdef DCSBIOS_WIFI_FORK
-  char ssid[] = "Freudenhaus2";
-  char passwd[] = "aquarius";
+  char ssid[] = "XXXXX";
+  char passwd[] = "XXXXX";
 #endif 
 
 
