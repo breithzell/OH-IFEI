@@ -2,6 +2,8 @@
 #define HELPER_H
 #include <Arduino.h>
 #include <display_driver.h>
+#include <cctype>
+#include <cstring>
 
 
 //DCS BIOS Forks
@@ -160,8 +162,7 @@ struct display_element{
   int pos_y;
   int textalign;
   LGFX_Sprite* sprite;
-  const char* value;
-  const char* old_value;
+  char value[8];
 };
 
 // Enumeration of display elements
@@ -194,21 +195,24 @@ enum Display_Name{
 };
 
 // Functions
-char* remove_trailing_spaces(const char* str) {
-    if (str == nullptr || *str == '\0') {
-        return nullptr; 
-    }
+bool copy_and_trim_spaces(const char* src, char* dest) {
+  size_t outSize = 8;
+  if (!dest) return false;
+  dest[0] = '\0';
+  if (!src) return false;
 
-    int length = strlen(str);
-    while (length > 0 && isspace(str[length - 1])) {
-        length--;
-    }
+  while (*src && std::isspace((unsigned char)*src)) src++;
+  if (!*src) return false;
 
-    char* result = new char[length + 1];
-    strncpy(result, str, length);
-    result[length] = '\0';
+  const char* end = src + std::strlen(src);
+  while (end > src && std::isspace((unsigned char)end[-1])) end--;
 
-    return result;
+  size_t n = (size_t)(end - src);
+  if (n >= outSize) n = outSize - 1;
+
+  std::memcpy(dest, src, n);
+  dest[n] = '\0';
+  return true;
 }
 #endif
 

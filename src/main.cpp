@@ -24,31 +24,31 @@ int offset_x = -10;
 int offset_y = 30;
 display_element display_elements[]= {
 //{  w,  h, px, py,a, sprite,   v }
-  { 76, 38, 92 + offset_x, 20 + offset_y,2,&TWOD,"12",""}, //RPML 
-  { 76, 38,246 + offset_x, 20 + offset_y,2,&TWOD,"34",""}, //RPMR
-  { 58, 18,180 + offset_x, 31 + offset_y,1,&LABELS,"RPM",""}, //RPMT
-  {108, 38, 60 + offset_x, 85 + offset_y,2,&THREED,"567",""}, //TMPL
-  {108, 38,246 + offset_x, 85 + offset_y,2,&THREED,"890",""}, //TMPR
-  { 58, 18,180 + offset_x , 96 + offset_y,1,&LABELS,"TEMP",""}, //TMPT
-  {108, 38, 60 + offset_x,160 + offset_y,2,&THREED,"123",""}, //FFL
-  {108, 38,246 + offset_x,160 + offset_y,2,&THREED,"456",""}, //FFR
-  { 58, 18,180 + offset_x,171 + offset_y,1,&LABELS,"FF",""}, //FFTU
-  { 65, 18,180 + offset_x,188 + offset_y,1,&LABELS,"X100",""}, //FFTL
-  { 76, 38, 92 + offset_x,400 + offset_y,2,&TWOD,"78",""}, //OILL
-  { 76, 38,246 + offset_x,400 + offset_y,2,&TWOD,"90",""}, //OILR
-  { 58, 18,180 + offset_x,415 + offset_y,1,&LABELS,"OIL",""}, //OILT
-  {150,154, 58 + offset_x,230 + offset_y,0,&NOZL_IMAGE[0],"0",""}, //NOZL
-  {150,154,211 + offset_x,230 + offset_y,0,&NOZR_IMAGE[0],"0",""}, //NOZR
-  { 58, 18,180 + offset_x,300 + offset_y,1,&LABELS,"NOZ",""}, //NOZT
-  {176, 38,560 + offset_x, 30 + offset_y,2,&Fuel,"12345",""}, //FUELU
-  {176, 38,560 + offset_x, 85 + offset_y,2,&Fuel,"67890",""}, //FUELL
-  {176, 38,560 + offset_x,215 + offset_y,2,&Fuel,"500",""}, //BINGO
-  { 58, 18,625 + offset_x,185 + offset_y,1,&LABELS,"BINGO",""}, //BINGOT
-  {176, 35,570 + offset_x,350 + offset_y,2,&CLOCK,"",""}, //CLOCKU
-  {176, 35,570 + offset_x,415 + offset_y,2,&CLOCK,"",""}, //CLOCKL
-  { 18, 18,746 + offset_x,367 + offset_y,1,&TAG,"Z",""}, //ZULU Tag
-  { 18, 18,736 + offset_x, 50 + offset_y,1,&TAG,"L",""}, //L Tag
-  { 18, 18,736 + offset_x,105 + offset_y,1,&TAG,"R",""}, //R Tag
+  { 76, 38, 92 + offset_x, 20 + offset_y,2,&TWOD,"12"}, //RPML 
+  { 76, 38,246 + offset_x, 20 + offset_y,2,&TWOD,"34"}, //RPMR
+  { 58, 18,180 + offset_x, 31 + offset_y,1,&LABELS,"RPM"}, //RPMT
+  {108, 38, 60 + offset_x, 85 + offset_y,2,&THREED,"567"}, //TMPL
+  {108, 38,246 + offset_x, 85 + offset_y,2,&THREED,"890"}, //TMPR
+  { 58, 18,180 + offset_x , 96 + offset_y,1,&LABELS,"TEMP"}, //TMPT
+  {108, 38, 60 + offset_x,160 + offset_y,2,&THREED,"123"}, //FFL
+  {108, 38,246 + offset_x,160 + offset_y,2,&THREED,"456"}, //FFR
+  { 58, 18,180 + offset_x,171 + offset_y,1,&LABELS,"FF"}, //FFTU
+  { 65, 18,180 + offset_x,188 + offset_y,1,&LABELS,"X100"}, //FFTL
+  { 76, 38, 92 + offset_x,400 + offset_y,2,&TWOD,"78"}, //OILL
+  { 76, 38,246 + offset_x,400 + offset_y,2,&TWOD,"90"}, //OILR
+  { 58, 18,180 + offset_x,415 + offset_y,1,&LABELS,"OIL"}, //OILT
+  {150,154, 58 + offset_x,230 + offset_y,0,&NOZL_IMAGE[0],"0"}, //NOZL
+  {150,154,211 + offset_x,230 + offset_y,0,&NOZR_IMAGE[0],"0"}, //NOZR
+  { 58, 18,180 + offset_x,300 + offset_y,1,&LABELS,"NOZ"}, //NOZT
+  {176, 38,560 + offset_x, 30 + offset_y,2,&Fuel,"12345"}, //FUELU
+  {176, 38,560 + offset_x, 85 + offset_y,2,&Fuel,"67890"}, //FUELL
+  {176, 38,560 + offset_x,215 + offset_y,2,&Fuel,"500"}, //BINGO
+  { 58, 18,625 + offset_x,185 + offset_y,1,&LABELS,"BINGO"}, //BINGOT
+  {176, 35,570 + offset_x,350 + offset_y,2,&CLOCK,""}, //CLOCKU
+  {176, 35,570 + offset_x,415 + offset_y,2,&CLOCK,""}, //CLOCKL
+  { 18, 18,746 + offset_x,367 + offset_y,1,&TAG,"Z"}, //ZULU Tag
+  { 18, 18,736 + offset_x, 50 + offset_y,1,&TAG,"L"}, //L Tag
+  { 18, 18,736 + offset_x,105 + offset_y,1,&TAG,"R"}, //R Tag
 };
 
 
@@ -192,10 +192,12 @@ void update_Clock(int element){
     DP2 = TC_Dd2;
     S = TC_S;
   }else{
-    if (LC_H[1] == 32){
+    if (LC_H == " 0") {
+      H = "0";
+      offset = 28;
+    } else if (LC_H[1] == 32){
       H = LC_H[0];
       offset = 28;
-
     }else {
       H = LC_H;
     }
@@ -257,14 +259,13 @@ DcsBios::IntegerBuffer lightsTestSwBuffer(0x74c8, 0x0800, 11, onLightsTestSwChan
 
 //################## RPM  ##################
 void onIfeiRpmLChange(char* newValue) {
-  display_elements[RPML].value = remove_trailing_spaces(newValue);
+  copy_and_trim_spaces(newValue, display_elements[RPML].value);
   update_element(RPML);
- 
 }
 DcsBios::StringBuffer<3> ifeiRpmLBuffer(0x749e, onIfeiRpmLChange);
 
 void onIfeiRpmRChange(char* newValue) {
-  display_elements[RPMR].value = remove_trailing_spaces(newValue);
+  copy_and_trim_spaces(newValue, display_elements[RPMR].value);
   update_element(RPMR);
 
 }
@@ -272,11 +273,11 @@ DcsBios::StringBuffer<3> ifeiRpmRBuffer(0x74a2, onIfeiRpmRChange);
 
 void onIfeiRpmTextureChange(char* newValue) {
   if (strcmp(newValue, "1") == 0) {
-    display_elements[RPMT].value = "RPM";
+    strcpy(display_elements[RPMT].value, "RPM");
     update_element(RPMT);
   }
   else if (strcmp(newValue, "0") == 0) {
-    display_elements[RPMT].value = "   ";
+    strcpy(display_elements[RPMT].value, "   ");
     update_element(RPMT);
   }
 }
@@ -288,9 +289,9 @@ void onIfeiTempLChange(char* newValue) {
   //if (!test_switch_enabled){
    // Serial.println("TestSwitchEnabled: ");Serial.println(test_switch_enabled);
    if (strcmp(newValue, "100") == 0 ){
-     display_elements[TMPL].value = "1000";
+     strcpy(display_elements[TMPL].value, "1000");
    }else{
-    display_elements[TMPL].value = remove_trailing_spaces(newValue) ;
+    copy_and_trim_spaces(newValue, display_elements[TMPL].value);
    }
     update_element(TMPL);
   //}
@@ -300,9 +301,9 @@ DcsBios::StringBuffer<3> ifeiTempLBuffer(0x74a6, onIfeiTempLChange);
 //Right
 void onIfeiTempRChange(char* newValue) {
    if (strcmp(newValue, "100") == 0 ){
-     display_elements[TMPR].value = "1000";
+     strcpy(display_elements[TMPR].value, "1000");
    }else{
-    display_elements[TMPR].value = remove_trailing_spaces(newValue);
+    copy_and_trim_spaces(newValue, display_elements[TMPR].value);
    }
     update_element(TMPR);
  // }
@@ -312,11 +313,11 @@ DcsBios::StringBuffer<3> ifeiTempRBuffer(0x74aa, onIfeiTempRChange);
 //Texture
 void onIfeiTempTextureChange(char* newValue) {
   if (strcmp(newValue, "1") == 0) {
-    display_elements[TMPT].value = "TEMP";
+    strcpy(display_elements[TMPT].value, "TEMP");
     update_element(TMPT);
   }
   else if (strcmp(newValue, "0") == 0) {
-    display_elements[TMPT].value = "    ";
+    strcpy(display_elements[TMPT].value, "    ");
     update_element(TMPT);
   }
 }
@@ -326,7 +327,7 @@ DcsBios::StringBuffer<1> ifeiTempTextureBuffer(0x74be, onIfeiTempTextureChange);
 //SP 
 void onIfeiSpChange(char* newValue) {
   if (!test_switch_enabled){
-    display_elements[TMPL].value = newValue;
+    copy_and_trim_spaces(newValue, display_elements[TMPL].value);
     update_element(TMPL);
   }
 }
@@ -335,7 +336,7 @@ DcsBios::StringBuffer<3> ifeiSpBuffer(0x74b2, onIfeiSpChange);
 //Codes
 void onIfeiCodesChange(char* newValue) {
   if (!test_switch_enabled){
-    display_elements[TMPR].value = newValue;
+    copy_and_trim_spaces(newValue, display_elements[TMPR].value);
     update_element(TMPR);
   }
 }
@@ -345,9 +346,9 @@ DcsBios::StringBuffer<3> ifeiCodesBuffer(0x74ae, onIfeiCodesChange);
 //LEFT
 void onIfeiFfLChange(char* newValue) {
    if (strcmp(newValue, "100") == 0 ){
-     display_elements[FFL].value = "1000";
+     strcpy(display_elements[FFL].value, "1000");
    }else{
-    display_elements[FFL].value = remove_trailing_spaces(newValue);
+    copy_and_trim_spaces(newValue, display_elements[FFL].value);
    }
     update_element(FFL);
 }
@@ -356,9 +357,9 @@ DcsBios::StringBuffer<3> ifeiFfLBuffer(0x7482, onIfeiFfLChange);
 //Right
 void onIfeiFfRChange(char* newValue) {
   if (strcmp(newValue, "100") == 0 ){
-     display_elements[FFR].value = "1000";
+     strcpy(display_elements[FFR].value, "1000");
    }else{
-    display_elements[FFR].value = remove_trailing_spaces(newValue);
+    copy_and_trim_spaces(newValue, display_elements[FFR].value);
    }
     update_element(FFR);
 }
@@ -366,14 +367,14 @@ DcsBios::StringBuffer<3> ifeiFfRBuffer(0x7486, onIfeiFfRChange);
 //Texture
 void onIfeiFfTextureChange(char* newValue) {
   if (strcmp(newValue, "1") == 0) {
-    display_elements[FFTU].value = "FF";
-    display_elements[FFTL].value = "X100";
+    strcpy(display_elements[FFTU].value, "FF");
+    strcpy(display_elements[FFTL].value, "X100");
     update_element(FFTU);
     update_element(FFTL);
   }
   else if (strcmp(newValue, "0") == 0) {
-    display_elements[FFTU].value = "";
-    display_elements[FFTL].value = "";
+    strcpy(display_elements[FFTU].value, "");
+    strcpy(display_elements[FFTL].value, "");
     update_element(FFTU);
     update_element(FFTL);
   }
@@ -383,13 +384,13 @@ DcsBios::StringBuffer<1> ifeiFfTextureBuffer(0x74c0, onIfeiFfTextureChange);
 //################## OIL  ##################
 //Left
 void onIfeiOilPressLChange(char* newValue) {
-  display_elements[OILL].value = remove_trailing_spaces(newValue);
+  copy_and_trim_spaces(newValue, display_elements[OILL].value);
   update_element(OILL);
 }
 DcsBios::StringBuffer<3> ifeiOilPressLBuffer(0x7496, onIfeiOilPressLChange);
 //Right
 void onIfeiOilPressRChange(char* newValue) {
-  display_elements[OILR].value = remove_trailing_spaces(newValue);
+  copy_and_trim_spaces(newValue, display_elements[OILR].value);
   update_element(OILR);
 }
 DcsBios::StringBuffer<3> ifeiOilPressRBuffer(0x749a, onIfeiOilPressRChange);
@@ -397,13 +398,13 @@ DcsBios::StringBuffer<3> ifeiOilPressRBuffer(0x749a, onIfeiOilPressRChange);
 void onIfeiOilTextureChange(char* newValue) {
   
   if (strcmp(newValue, "1") == 0) {
-    display_elements[OILT].value ="OIL";
-    display_elements[NOZT].value ="NOZ";
+    strcpy(display_elements[OILT].value, "OIL");
+    strcpy(display_elements[NOZT].value, "NOZ");
    
   }
   else if (strcmp(newValue, "0") == 0) {
-    display_elements[OILT].value ="   ";
-    display_elements[NOZT].value ="   ";
+    strcpy(display_elements[OILT].value, "   ");
+    strcpy(display_elements[NOZT].value, "   ");
   }
   update_element(OILT);
   update_element(NOZT);
@@ -418,27 +419,27 @@ void onExtNozzlePosLChange(unsigned int newValue) {
    
    int NOZL_v = map(newValue, 0, 65535, 0, 100);
     switch (NOZL_v) { 
-      case 0 ... 4:    display_elements[NOZL].value= "0";
+      case 0 ... 4:    strcpy(display_elements[NOZL].value, "0");
         break;
-      case 5 ... 14:   display_elements[NOZL].value= "1";
+      case 5 ... 14:   strcpy(display_elements[NOZL].value, "1");
         break;
-      case 15 ... 24:  display_elements[NOZL].value= "2";
+      case 15 ... 24:  strcpy(display_elements[NOZL].value, "2");
         break;
-      case 25 ... 34:  display_elements[NOZL].value= "3";
+      case 25 ... 34:  strcpy(display_elements[NOZL].value, "3");
         break;
-      case 35 ... 44:  display_elements[NOZL].value= "4";
+      case 35 ... 44:  strcpy(display_elements[NOZL].value, "4");
         break;
-      case 45 ... 54:  display_elements[NOZL].value= "5";
+      case 45 ... 54:  strcpy(display_elements[NOZL].value, "5");
         break;
-      case 55 ... 64:  display_elements[NOZL].value= "6";
+      case 55 ... 64:  strcpy(display_elements[NOZL].value, "6");
         break;
-      case 65 ... 74:  display_elements[NOZL].value= "7";
+      case 65 ... 74:  strcpy(display_elements[NOZL].value, "7");
         break;
-      case 75 ... 84:  display_elements[NOZL].value= "8";
+      case 75 ... 84:  strcpy(display_elements[NOZL].value, "8");
         break;
-      case 85 ... 94:  display_elements[NOZL].value= "9";
+      case 85 ... 94:  strcpy(display_elements[NOZL].value, "9");
         break;
-      case 95 ... 100: display_elements[NOZL].value= "10";
+      case 95 ... 100: strcpy(display_elements[NOZL].value, "10");
         break;
     }
     display_elements[NOZL].sprite = &NOZL_IMAGE[atoi(display_elements[NOZL].value) + colormode];
@@ -496,27 +497,27 @@ void onExtNozzlePosRChange(unsigned int newValue) {
    int NOZR_v = map(newValue, 0, 65535, 0, 100);
     
     switch (NOZR_v) { 
-      case 0 ... 4:   display_elements[NOZR].value= "0";
+      case 0 ... 4:   strcpy(display_elements[NOZR].value, "0");
         break;
-      case 5 ... 14:  display_elements[NOZR].value= "1";
+      case 5 ... 14:  strcpy(display_elements[NOZR].value, "1");
         break;
-      case 15 ... 24: display_elements[NOZR].value= "2";
+      case 15 ... 24: strcpy(display_elements[NOZR].value, "2");
         break;
-      case 25 ... 34: display_elements[NOZR].value= "3";
+      case 25 ... 34: strcpy(display_elements[NOZR].value, "3");
         break;
-      case 35 ... 44: display_elements[NOZR].value= "4";
+      case 35 ... 44: strcpy(display_elements[NOZR].value, "4");
         break;
-      case 45 ... 54: display_elements[NOZR].value= "5";
+      case 45 ... 54: strcpy(display_elements[NOZR].value, "5");
         break;
-      case 55 ... 64: display_elements[NOZR].value= "6";
+      case 55 ... 64: strcpy(display_elements[NOZR].value, "6");
         break;
-      case 65 ... 74: display_elements[NOZR].value= "7";
+      case 65 ... 74: strcpy(display_elements[NOZR].value, "7");
         break;
-      case 75 ... 84: display_elements[NOZR].value= "8";
+      case 75 ... 84: strcpy(display_elements[NOZR].value, "8");
         break;
-      case 85 ... 94: display_elements[NOZR].value= "9";
+      case 85 ... 94: strcpy(display_elements[NOZR].value, "9");
         break;
-      case 95 ... 100: display_elements[NOZR].value= "10";
+      case 95 ... 100: strcpy(display_elements[NOZR].value, "10");
         break;
     }
     display_elements[NOZR].sprite = &NOZR_IMAGE[atoi(display_elements[NOZR].value) + colormode];
@@ -606,7 +607,7 @@ DcsBios::IntegerBuffer cockkpitLightModeSwBuffer(0x74c8, 0x0600, 9, onCockkpitLi
 //################## FUEL  ##################
 //Upper
 void onIfeiFuelUpChange(char* newValue) {
-  display_elements[FUELU].value = remove_trailing_spaces(newValue);
+  copy_and_trim_spaces(newValue, display_elements[FUELU].value);
   update_element(FUELU);
 }
 DcsBios::StringBuffer<6> ifeiFuelUpBuffer(0x7490, onIfeiFuelUpChange);
@@ -620,7 +621,7 @@ void onIfeiTChange(char* newValue) {
     }
   }
   if ( spaces != 6){
-    display_elements[FUELU].value = remove_trailing_spaces(newValue);
+    copy_and_trim_spaces(newValue, display_elements[FUELU].value);
     update_element(FUELU);
   }
 }
@@ -629,9 +630,9 @@ DcsBios::StringBuffer<6> ifeiTBuffer(0x757c, onIfeiTChange);
 //Tag L
 void onIfeiLTextureChange(char* newValue) {
   if (strcmp(newValue, "1") == 0){
-    display_elements[L].value = "L";
+    strcpy(display_elements[L].value, "L");
   }else{
-    display_elements[L].value = " ";
+    strcpy(display_elements[L].value, " ");
   }
   update_element(L);
 }
@@ -639,13 +640,13 @@ DcsBios::StringBuffer<1> ifeiLTextureBuffer(0x7582, onIfeiLTextureChange);
 
 //Lower
 void onIfeiFuelDownChange(char* newValue) {
-  display_elements[FUELL].value = remove_trailing_spaces(newValue);
+  copy_and_trim_spaces(newValue, display_elements[FUELL].value);
   update_element(FUELL);
 }
 DcsBios::StringBuffer<6> ifeiFuelDownBuffer(0x748a, onIfeiFuelDownChange);
 //Time mode
 void onIfeiTimeSetModeChange(char* newValue) {
-  display_elements[FUELL].value = remove_trailing_spaces(newValue);
+  copy_and_trim_spaces(newValue, display_elements[FUELL].value);
   update_element(FUELL);
 }
 DcsBios::StringBuffer<6> ifeiTimeSetModeBuffer(0x74b6, onIfeiTimeSetModeChange);
@@ -653,9 +654,9 @@ DcsBios::StringBuffer<6> ifeiTimeSetModeBuffer(0x74b6, onIfeiTimeSetModeChange);
 //Tag R
 void onIfeiRTextureChange(char* newValue) {
   if (strcmp(newValue, "1") == 0){
-    display_elements[R].value = "R";
+    strcpy(display_elements[R].value, "R");
   }else{
-    display_elements[R].value = " ";
+    strcpy(display_elements[R].value, " ");
   }
   update_element(R);
 }
@@ -666,9 +667,9 @@ DcsBios::StringBuffer<1> ifeiRTextureBuffer(0x7584, onIfeiRTextureChange);
 //Texture
 void onIfeiBingoTextureChange(char* newValue) {
   if (strcmp(newValue, "1") == 0){
-    display_elements[BINGOT].value = "BINGO";
+    strcpy(display_elements[BINGOT].value, "BINGO");
   }else{
-    display_elements[BINGOT].value = "    ";
+    strcpy(display_elements[BINGOT].value, "    ");
   }
   update_element(BINGOT);
 }
@@ -677,7 +678,7 @@ DcsBios::StringBuffer<1> ifeiBingoTextureBuffer(0x74c6, onIfeiBingoTextureChange
 //Digits
 void onIfeiBingoChange(char* newValue) {
   
-    display_elements[BINGO].value = remove_trailing_spaces(newValue);
+    copy_and_trim_spaces(newValue, display_elements[BINGO].value);
     update_element(BINGO);
 
 }
@@ -722,11 +723,11 @@ DcsBios::StringBuffer<2> ifeiClockSBuffer(0x7472, onIfeiClockSChange);
 //Tag Z
 void onIfeiZTextureChange(char* newValue) {
   if (strcmp(newValue, "1") == 0) {
-    display_elements[ZULU].value = "Z";
+    strcpy(display_elements[ZULU].value, "Z");
     update_element(ZULU);
   }
   else if (strcmp(newValue, "0") == 0) {
-    display_elements[ZULU].value = " ";
+    strcpy(display_elements[ZULU].value, " ");
     update_element(ZULU);
   }
 }
