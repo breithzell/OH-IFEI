@@ -35,46 +35,47 @@ The screen is plug and play. You can just plug it via an USB-C and you will be a
 
 ## GPIO Pins 
 
-| Pin | 	Usage |
-| --- | ---     |
-| GPIO 0 | BOOT_BTN / I2S_BCLK (v1.1) |
-| GPIO 1 | LCD_G5 |
-| GPIO 2 | TFT_BL |
-| GPIO 3 | LCD_G2 |
-| GPIO 4 | LCD_B4 |
-| GPIO 5 | LCD_B3 |
-| GPIO 6 | LCD_B2 |
-| GPIO 7 | LCD_B1 |
-| GPIO 8 | LCD_G3 |
-| GPIO 9 | LCD_G0 |
-| GPIO 10 | SD_CS |
-| GPIO 11 | SD_MOSI |
-| GPIO 12 | SD_SCK |
-| GPIO 13 | SD_MISO |
-| GPIO 14 | LCD_R0 |
-| GPIO 15 | LCD_B0 |
-| GPIO 16 | LCD_G4 |
-| GPIO 17 | I2S_DIN |
-| GPIO 18 | CTP_INT* / I2S_LRCLK |
-| GPIO 19 | CTP_SDA / I2S_BCLK (v1.0) |
-| GPIO 20 | CTP_SCL |
-| GPIO 21 | LCD_R1 |
-| GPIO 33 | NA |
-| GPIO 34 | NA |
-| GPIO 35 | NC / NA |
-| GPIO 36 | NC / NA |
-| GPIO 37 | NC / NA |
-| GPIO 38 | CTP_RST |
-| GPIO 39 | LCD_HSYNC |
-| GPIO 40 | LCD_VSYNC |
-| GPIO 41 | LCD_DE |
-| GPIO 42 | LCD_PCLK |
-| GPIO 43 | U0TXD |
-| GPIO 44 | U0RXD |
-| GPIO 45 | LCD_R4 |
-| GPIO 46 | LCD_G1 |
-| GPIO 47 | LCD_R2 |
-| GPIO 48 | LCD_R3 |
+| Usage | Jincay ESP32-8048S070C	 | waveshare-esp32s3-no-touch |
+| ---   | ---                      | ----                       |
+| BOOT_BTN / I2S_BCLK (v1.1) | GPIO 0 | 
+| CTP_INT* / I2S_LRCLK      | GPIO 18 |       NA    |
+| CTP_RST     | GPIO 38 |     GPIO    | NA
+| CTP_SCL     | GPIO 20 |     GPIO 9   |
+| CTP_SDA / I2S_BCLK (v1.0) | GPIO 19 |       GPIO 8   |
+| I2S_DIN     | GPIO 17 |     GPIO    |
+| LCD_B0      | GPIO 15 |     GPIO 14   |
+| LCD_B1      | GPIO 7 |      GPIO 38   |
+| LCD_B2      | GPIO 6 |      GPIO 18   |
+| LCD_B3      | GPIO 5 |      GPIO 17   |
+| LCD_B4      | GPIO 4 |      GPIO 10   |
+| LCD_DE      | GPIO 41 |     GPIO 5    |
+| LCD_G0      | GPIO 9 |      GPIO 39   |
+| LCD_G1      | GPIO 46 |     GPIO 0   |
+| LCD_G2      | GPIO 3 |      GPIO 45   |
+| LCD_G3      | GPIO 8 |      GPIO 48   |
+| LCD_G4      | GPIO 16 |     GPIO 47   |
+| LCD_G5      | GPIO 1 |      GPIO 21 |
+| LCD_HSYNC   | GPIO 39 |     NA      |
+| LCD_PCLK    | GPIO 42 |     GPIO 7   |
+| LCD_R0      | GPIO 14 |     GPIO 1   |
+| LCD_R1      | GPIO 21 |     GPIO 2   |
+| LCD_R2      | GPIO 47 |     GPIO 40   |
+| LCD_R3      | GPIO 48 |     GPIO 41  |
+| LCD_R4      | GPIO 45 |     GPIO 42   |
+| LCD_VSYNC   | GPIO 40 |     GPIO 3   |
+| NA          | GPIO 33 |     GPIO    |
+| NA          | GPIO 34 |     GPIO    |
+| NC / NA     | GPIO 35 |     GPIO    |
+| NC / NA     | GPIO 36 |     GPIO    |
+| NC / NA     | GPIO 37 |     GPIO    |
+| SD_CS       | GPIO 10 |     GPIO    |
+| SD_MISO     | GPIO 13 |     NA   |
+| SD_MOSI     | GPIO 11 |     NA   |
+| SD_SCK      | GPIO 12 |     NA   |
+| TFT_BL      | GPIO 2 |      GPIO ?  |
+| U0RXD       | GPIO 44 |     GPIO ?   |
+| U0TXD       | GPIO 43 |     GPIO ?  |
+
 
 ### External Pullup Resistors 
 No idea - this needs to be checked if you want to use the interfaces P1 -> P6 with the IFEI buttons. 
