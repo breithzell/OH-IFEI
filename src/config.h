@@ -12,7 +12,11 @@ Using Wifi for data communication
 */
 
 //#define DCSBIOS_DEFAULT   
-#define DCSBIOS_DEFAULT   
+#define DCSBIOS_DEFAULT 
+#ifdef DCSBIOS_DEFAULT 
+  // Otherwise DCS-Skunkworks doesn't compile 
+  #define DCSBIOS_ESP32 
+#endif  
 
 // Wifi credentials if Wifi is enabled
 #ifdef DCSBIOS_WIFI_FORK
