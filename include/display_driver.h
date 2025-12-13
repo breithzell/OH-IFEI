@@ -55,17 +55,17 @@ public:
       cfg.pin_d10 = GPIO_NUM_21;   // G5
       cfg.pin_d11 = GPIO_NUM_1;    // R0
       cfg.pin_d12 = GPIO_NUM_2;    // R1
-      cfg.pin_d13 = GPIO_NUM_40;   // R2
+      cfg.pin_d13 = GPIO_NUM_42;   // R2
       cfg.pin_d14 = GPIO_NUM_41;   // R3
-      cfg.pin_d15 = GPIO_NUM_42;   // R4
+      cfg.pin_d15 = GPIO_NUM_40;   // R4
 
-      cfg.pin_henable = GPIO_NUM_4;  // DE
+      cfg.pin_henable = GPIO_NUM_5;  // DE
       cfg.pin_vsync   = GPIO_NUM_3;  // VSYNC
-      // cfg.pin_hsync   = GPIO_NUM_XX;  // HSYNC
+      cfg.pin_hsync   = GPIO_NUM_46;  // HSYNC
       cfg.pin_pclk    = GPIO_NUM_7;  // PCLK
       cfg.freq_write  = 15000000;
 
-      cfg.hsync_polarity    = 1;
+      cfg.hsync_polarity    = 46;
       cfg.hsync_front_porch = 20;
       cfg.hsync_pulse_width = 1;
       cfg.hsync_back_porch  = 87;
@@ -80,7 +80,7 @@ public:
 
     {
       auto cfg = _light_instance.config();
-      cfg.pin_bl = ; // TFT_BL
+      cfg.pin_bl = 2 ; // TFT_BL
       _light_instance.config(cfg);
     }
     _panel_instance.light(&_light_instance);
@@ -96,7 +96,7 @@ public:
       cfg.pin_sda    = GPIO_NUM_8;  // SDA
       cfg.pin_scl    = GPIO_NUM_9;  // SCL
       // cfg.pin_int    = GPIO_NUM_XX; // INT
-      // cfg.pin_rst    = GPIO_NUM_XX; // RST
+      cfg.pin_rst    = XCHAL_EXTINT1_NUM; // RST
       cfg.x_max      = 800;
       cfg.y_max      = 480;
       cfg.freq       = 400000;
