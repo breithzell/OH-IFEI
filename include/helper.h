@@ -1,10 +1,16 @@
 #ifndef HELPER_H
 #define HELPER_H
 #include <Arduino.h>
-#include <display_driver.h>
 #include <cctype>
 #include <cstring>
 
+// Load the proper display config
+#ifdef WAVESHARE_ESP32S3_NO_TOUCH
+  #include <waveshare_display_driver.h>
+#endif
+#ifdef JINCAY_ESP32_8048S070C
+  #include <jincay_display_driver.h>
+#endif
 
 //DCS BIOS Forks
 #ifdef DCSBIOS_WIFI_FORK 

@@ -18,6 +18,12 @@ Using Wifi for data communication
   #define DCSBIOS_ESP32 
 #endif  
 
+// Automatically load the proper screen drivers. Keep uncommented your screen
+// To add more screen, you need to have one SCREEN_display_drivers.h
+// Check README for details
+#define WAVESHARE_ESP32S3_NO_TOUCH
+// #define JINCAY_ESP32_8048S070C
+
 // Wifi credentials if Wifi is enabled
 #ifdef DCSBIOS_WIFI_FORK
   char ssid[] = "XXXXX";
