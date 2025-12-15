@@ -5,6 +5,11 @@
 #include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
 #include <driver/i2c.h>
 
+// Define draw offset to properly display the image where it should be
+// That might need to be changed based on your OH2A2A1-1 Assy, Panel, IFEI manufacturing
+#define OFFSET_X -5
+#define OFFSET_Y -10
+  
 class LGFX : public lgfx::LGFX_Device
 {
 public:

@@ -20,8 +20,8 @@ Notes:
 
 //################ Configure Display elelments ###############################
 //{width,hight, posx, posy, textalign, sprite, value} 
-int offset_x = -10;
-int offset_y = 30;
+int offset_x = OFFSET_X;
+int offset_y = OFFSET_Y;
 display_element display_elements[]= {
 //{  w,  h, px, py,a, sprite,   v }
   { 76, 38, 92 + offset_x, 20 + offset_y,2,&TWOD,"12"}, //RPML 
